@@ -47,4 +47,5 @@ document.addEventListener('DOMContentLoaded', () => {
       window.location.href = '../map/map.html';
     });
   }
+
 });
