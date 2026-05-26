@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Pretendard', sans-serif;
+  letter-spacing: -0.3px;
+  /* 모바일에서 터치 시 생기는 파란색 음영 방지 */
+  -webkit-tap-highlight-color: transparent;
+}
+
+.app-container {
+  width: 100%;       /* 화면 가로폭 전체 차지 */
+  max-width: 500px;  /* PC 브라우저로 볼 때 너무 퍼지지 않도록 최대폭만 안정적으로 제한 */
+  min-height: 100vh; /* 화면 세로 높이 가득 채움 */
+  background-color: #ffffff;
+  position: relative;
+  padding: 24px 20px 100px 20px; /* 하단 탭바가 가리지 않도록 아래쪽 여백 확보 */
+}
+
+body {
+  background-color: #ffffff; /* 휴대폰 화면 내부 배경색 */
+  color: #1c1c1e;
+  display: flex;
+  justify-content: center;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 10px;
+  margin-bottom: 24px;
+}
+.header h2 {
+    margin: 2px 0 6px 0;
+}
+.bottom-nav {
+  position: fixed; /* absolute에서 fixed로 변경하여 스크롤해도 하단에 고정되게 수정 */
+  bottom: 0; 
+  left: 50%;
+  transform: translateX(-50%); /* 화면 중앙 정렬 균형 맞춤 */
+  width: 100%;
+  max-width: 500px;
+  height: 76px;
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 12px 14px 12px;
+  z-index: 100;
+}
+.nav-tab { display: flex; flex-direction: column; align-items: center; flex: 1; transition: all 0.2s ease; }
+.nav-icon { font-size: 20px; margin-bottom: 3px; }
+.nav-text { font-size: 10px; color: #9ca3af; font-weight: 600; }
+.nav-tab.active .nav-text { color: #4f46e5; }
+
+.nav-center { display: flex; flex-direction: column; align-items: center; position: relative; top: -14px; flex: 1; }
+.center-circle {
+  width: 50px; height: 50px;
+  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+  border-radius: 50%;
+  display: flex; justify-content: center; align-items: center;
+  font-size: 20px; color: white;
+  box-shadow: 0 6px 16px rgba(79, 70, 229, 0.25);
+  margin-bottom: 2px;
+}
+
+.clickable-box { cursor: pointer; }
+
+.clickable-box:active {
+  transform: scale(0.97) !important;
+  transition: transform 0.05s ease;
+  opacity: 0.9;
+}
