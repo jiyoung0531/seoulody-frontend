@@ -140,25 +140,14 @@ body {
   align-items: center;
   z-index: 100;
 }
+.nav-tab { display: flex; flex-direction: column; align-items: center; flex: 1; transition: all 0.2s ease; }
+.nav-icon { 
+  height: 24px;
+  width: 24px;
+  margin-bottom: 3px; }
+.nav-text { font-size: 12px; color: #9ca3af; font-weight: 600; }
 
-.nav-item.active {
-  color: #6C5CE7;
-  font-weight: 600;
-}
-
-.nav-center-logo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 16px;
-  font-weight: 700;
-  color: #6C5CE7;
-}
-.logo-text {
-  font-size: 10px;
-  margin-top: 2px;
-}
-
+.nav-center { display: flex; flex-direction: column; align-items: center; position: relative; top: -14px; flex: 1; }
 .home-indicator {
   width: 140px;
   height: 5px;
@@ -171,3 +160,11 @@ body {
   z-index: 1000;
 }
 .nav-tab { display: flex; flex-direction: column; align-items: center; flex: 1; transition: all 0.2s ease; }
+
+.clickable-box { cursor: pointer; }
+
+.clickable-box:active {
+  transform: scale(0.97) !important;
+  transition: transform 0.05s ease;
+  opacity: 0.9;
+}
