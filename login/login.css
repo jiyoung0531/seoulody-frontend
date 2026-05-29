@@ -131,3 +131,44 @@ body {
   left: 50%;
   transform: translateX(-50%);
 }
+
+.find-signup-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 24px;
+  margin-bottom: 2px; /* 하단 구분선과의 간격 */
+  width: 100%;
+}
+
+/* 찾기 글씨 스타일 (은은한 회색) */
+.find-btn {
+  background: none;
+  border: none;
+  font-size: 13px;
+  font-weight: 500;
+  color: #8e8e93;
+  cursor: pointer;
+  padding: 4px;
+}
+
+/* 가운데 세로 분리선 (|) */
+.vertical-bar {
+  font-size: 12px;
+  color: #d1d1d6;
+  user-select: none;
+}
+
+/* 🔥 핵심: 하이라이트 된 회원가입 버튼 스타일 (메인 보라색 포인트) */
+.signup-link-btn {
+  background: none;
+  border: none;
+  font-size: 13px;
+  font-weight: 700; /* 시안처럼 굵게 강조 */
+  color: #6C5CE7;   /* 선율 시그니처 보라색 */
+  cursor: pointer;
+  padding: 4px;
+  text-decoration: none;
+}
+
