@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const signupForm = document.getElementById('signup-form');
   
-  // 인풋 요소들
+
   const idInput = document.getElementById('user-id');
   const pwInput = document.getElementById('user-pw');
   const pwConfirmInput = document.getElementById('user-pw-confirm');
@@ -25,7 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
   let isEmailSent = false;
   let isCodeVerified = false;
 
-  // 1. 🔒 실시간 비밀번호 정규식 조건 체크 로직
   pwInput.addEventListener('input', () => {
     const val = pwInput.value;
 
@@ -58,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
   emailInput.addEventListener('input', () => { isCodeVerified = false; validateFormStatus(); });
   authCodeInput.addEventListener('input', validateFormStatus);
 
-  // 2. 🆔 아이디 중복확인 모의 연동
+  
   btnCheckId.addEventListener('click', async () => {
     if (idInput.value.trim() === "") {
       alert('아이디를 입력해주세요.');
@@ -79,7 +78,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // 3. ✉️ 이메일 인증코드 요청 모의 연동
   btnRequestEmail.addEventListener('click', () => {
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailInput.value)) {
       alert('올바른 이메일 형식을 입력해주세요.');
@@ -125,7 +123,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // 6. 🚀 최종 회원가입 백엔드 데이터 전송 로직
   signupForm.addEventListener('submit', async (e) => {
     e.preventDefault();
 

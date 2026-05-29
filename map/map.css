@@ -6,7 +6,6 @@
   padding: 0;
   font-family: 'Pretendard', sans-serif;
   letter-spacing: -0.3px;
-  /* 모바일에서 터치 시 생기는 파란색 음영 방지 */
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -16,8 +15,8 @@
   background-color: #FCF8FB;
   position: relative;
   display: flex;
-  flex-direction: column; /* 👈 내부 요소들을 세로로 줄 세우는 핵심 속성! */
-  overflow: hidden;      /* 👈 내부 요소가 프레임을 찢고 나가지 못하게 차단 */
+  flex-direction: column; 
+  overflow: hidden;      
   margin: 0 auto;
 }
 
@@ -29,11 +28,11 @@
   flex-direction: column;
   gap: 12px;
   border-bottom: 1px solid rgba(0,0,0,0.05);
-  z-index: 100; /* 지도보다 무조건 위에 정렬 */
+  z-index: 100; 
 }
 
 body {
-  background-color: #ffffff; /* 휴대폰 화면 내부 배경색 */
+  background-color: #ffffff; 
   color: #1c1c1e;
   display: flex;
   justify-content: center;
@@ -92,14 +91,13 @@ body {
 
 .map-top-section {
   width: 100%;
-  background-color: #FCF8FB; /* 기존 마이페이지/홈과 같은 배경색 */
+  background-color: #FCF8FB; 
   padding: 12px 20px;
   display: flex;
   flex-direction: column;
-  gap: 14px; /* 버튼들과 검색창 사이 간격 */
+  gap: 14px; 
 }
 
-/* 1. 필터 버튼 레이아웃 */
 .filter-container {
   display: flex;
   gap: 10px;
@@ -116,15 +114,14 @@ body {
   cursor: pointer;
 }
 
-/* 활성화된 버튼 스타일 (전체 버튼 기본값) */
 .filter-btn.active {
-  border-color: #6C5CE7; /* 시안의 메인 보라색 */
+  border-color: #6C5CE7; 
   color: #6C5CE7;
   background-color: #ffffff;
   font-weight: 600;
 }
 
-/* 2. 검색창 레이아웃 */
+
 .search-container {
   width: 100%;
 }
@@ -132,7 +129,7 @@ body {
 .search-box {
   width: 100%;
   height: 46px;
-  background-color: #F2EFFE; /* 은은한 연보라빛 검색창 배경색 */
+  background-color: #F2EFFE; 
   border-radius: 24px;
   display: flex;
   align-items: center;
@@ -150,37 +147,35 @@ body {
 }
 
 #map-search-input::placeholder {
-  color: #AEAEB2; /* 시안의 연한 회색 안내 문구 색상 */
+  color: #AEAEB2; 
 }
 
 .map-wrapper {
   width: 100%;       
-  max-width: 402px;   /* 👈 [추가] 402px보다 절대 커지지 마라! */
+  max-width: 402px;   
   flex: 1;           
   position: relative; 
   margin-bottom: 92px; 
-  margin-left: 0;     /* 👈 [추가] 왼쪽 벽에 바짝 붙어라! */
+  margin-left: 0;    
   margin-right: auto;
   overflow: hidden;
 }
 
-/* 🌟 진짜 지도가 채워질 스타일 */
 #kakao-map-container {
   width: 100% !important;      
   max-width: 402px !important;  
   height: 100%;
-  margin-left: 0 !important;   /* 👈 [추가] 가출 방지용 왼쪽 강제 고정 */
+  margin-left: 0 !important;   
   z-index: 1;
 }
 
-/* 🔍 지도 위에 둥둥 띄우는 서치박스 레이아웃 */
 .floating-search-area {
   position: absolute; 
   top: 16px; 
   left: 50%;
   transform: translateX(-50%); 
-  width: calc(100% - 40px); /* 402px 안에서 양옆 20px씩 여백 주기 */
-  max-width: 362px;         /* 👈 [추가] 검색창도 모바일 프레임 안으로 크기 제한 */
+  width: calc(100% - 40px); 
+  max-width: 362px;         
   z-index: 10;
 }
 

@@ -62,14 +62,13 @@ body {
   padding-left: 2px;
 }
 
-/* 📦 시안의 핵심: 둥근 폼 그룹 상자 */
 .form-group-box {
-  width: 100%;          /* 👈 꽉 채우기 */
+  width: 100%;      
   border: 1px solid #c8c7cc;
   border-radius: 20px;
   background-color: #ffffff;
   padding: 0 16px;
-  margin: 0 auto 20px auto; /* 👈 위아래 마진은 유지하고 좌우를 auto로 주어 완벽하게 가운데로 정렬! */
+  margin: 0 auto 20px auto; 
 }
 /* 입력칸 한 줄 레이아웃 */
 .input-row {
@@ -112,7 +111,6 @@ body {
   color: #c8c7cc;
 }
 
-/* 🔘 우측 내장형 중복확인 / 인증 버튼 스타일 */
 .inline-btn {
   height: 32px;
   padding: 0 12px;
@@ -126,7 +124,6 @@ body {
   white-space: nowrap;
 }
 
-/* 🔒 비밀번호 조건 체크리스트 박스 */
 .pw-requirements {
   display: flex;
   flex-direction: column;
@@ -136,7 +133,7 @@ body {
 }
 .req-item {
   font-size: 13px;
-  color: #c8c7cc; /* 기본 회색 */
+  color: #c8c7cc;
   display: flex;
   align-items: center;
   gap: 6px;
@@ -146,17 +143,14 @@ body {
   font-size: 11px;
 }
 
-/* 비밀번호 조건 충족 시 바뀔 활성화 컬러 (연보라빛 도는 그레이 느낌) */
 .req-item.active {
   color: #8e8e93;
 }
 
-/* 비밀번호 확인창 줄 상단 보더 라인 정의 */
 .password-confirm-row {
   border-top: 1px solid #efeff4;
 }
 
-/* 📱 하단 고정 회원가입 버튼 */
 .bottom-btn-area {
   position: absolute;
   bottom: 0;
@@ -170,7 +164,7 @@ body {
 .submit-btn {
   width: 100%;
   height: 52px;
-  background-color: #aeaeb2; /* 기본 비활성화 회색 */
+  background-color: #aeaeb2; 
   color: #ffffff;
   border: none;
   border-radius: 14px;
@@ -179,7 +173,7 @@ body {
   cursor: not-allowed;
   transition: all 0.2s ease;
 }
-/* 가입 조건 전부 다 채웠을 때 켜질 쨍한 보라색 활성화 클래스 */
+
 .submit-btn.active {
   background-color: #6C5CE7;
   cursor: pointer;
