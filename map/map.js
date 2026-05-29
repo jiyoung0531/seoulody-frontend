@@ -1,10 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
   
-    // 1. 지도를 그려넣을 HTML 방 가져오기
     const mapContainer = document.getElementById('kakao-map-container');
 
     const purpleIcon = L.icon({
-            // 전 세계 개발자들이 애용하는 투명한 보라색 핀 이미지 주소입니다!
             iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-violet.png',
             shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
             iconSize: [25, 41],     // 마커 크기
@@ -16,7 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (mapContainer) {
         const map = L.map('kakao-map-container').setView([37.5650, 126.9830], 13);
 
-        // 3. 전 세계 오픈 스트리트 맵 실제 디자인 타일 로드해서 화면에 똭 뿌리기!
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; OpenStreetMap contributors'
         }).addTo(map);
