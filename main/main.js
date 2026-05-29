@@ -48,4 +48,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  const mypageTapBox = document.getElementById('box-nav-mypage');
+    if (mypageTapBox) {
+        mypageTapBox.addEventListener('click', () => {
+            window.location.href = '../mypage/mypage.html';
+        });
+    }
+
 });
